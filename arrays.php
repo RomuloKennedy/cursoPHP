@@ -1,0 +1,92 @@
+<?php 
+
+
+
+//melhor forma de ciar um array >>
+$motos = ["honda","yamaha","Kawazaki"];
+print_r($motos);
+echo "<hr>";
+
+
+/*
+
+//Arrays
+
+$carros = array("BMW","Veloster","Hilux");
+
+// Para exibir arrays existe uma função especifica >>
+print_r($carros);
+
+echo "<hr>".$carros[0];
+
+//Também podemos definir o número de cada indice manualmente >>
+$carros2 = array(1=>"Ferrari",2=>"Lamborghini",3=>"Gol Quadrado");
+
+echo "<hr>".$carros2[1]."<hr>";
+print_r($carros2);
+
+//INSERIR ELEMENTOS NO ARRAY 
+//>>
+$carros2[] = "Amarok";
+//<<
+
+echo "<hr>".$carros2[4]."<hr>";
+print_r($carros2);
+
+//TAMBÉM PODEMOS ESCOLHER A POSIÇÃO QUE ELE IRÁ ENTRAR
+
+$carros2[10] = "Camaro";
+echo "<hr>";
+print_r($carros2);
+
+*/
+
+//Contador de arrays
+
+echo count($motos);
+echo "<br>";
+// Foreach em PHP 
+
+foreach($motos as $valor){
+    //em cada loop ele vai atribuindo um valor do array($motos) à variavél $valor, e no echo nós chamamos esse valor pra tela em cada loop;
+    echo $valor."<br>";
+
+}
+
+//Array Associativo; (Estamos nomeando os indices ao invés de númera-los);
+
+$pessoa = ["nome"=>"Rômulo","idade"=>20,"altura"=>1.78];
+//Linha de separação >>
+echo "<hr>";
+//Chamando indice na tela >>
+echo $pessoa["nome"];
+// Adicionando elemento no array >>
+
+$pessoa["cidade"] = "Natal";
+echo "<hr>";
+
+//Nesse foreach chamamos o indice também
+foreach($pessoa as $indice => $valor2){
+    echo $indice.":".$valor2;
+    echo "<br>";
+}
+
+
+//Array Multidimensionais
+
+$times = [
+    "cariocas" =>["Vasco","Flamengo","botafogo"],
+    "paulistas"=>["santos","são paulo","palmeiras"],
+    "baianos"=>["bahia","vitória","itabuna"]
+];
+
+print_r($times);
+echo "<br>";
+echo $times["cariocas"][0];
+echo "<hr>";
+
+foreach($times["cariocas"] as $indice2 =>$valor4){
+   echo $indice.":".$valor4."<br>";
+}
+
+?>
